@@ -13,28 +13,41 @@ safety_rating = df['safety_rating'].tolist()
 classification_of_vehicle = df['classification_of_vehicle'].tolist()
 
 
-#3
+# 3
 prince_with_med = [idx for idx, val in enumerate(price) if val == 'med']
-print(prince_with_med)
-#4
+# print(prince_with_med)
+# 4
 passenger_with_price_med = [val for idx, val in enumerate(
     number_of_passengers) if idx in prince_with_med]
 
-print(passenger_with_price_med)
-#5
-price_high_with_maintain =[idx for idx,val in enumerate(price) if val == 'high' and maintenance_cost[idx] != 'low']
-print(price_high_with_maintain)
+# print(passenger_with_price_med)
+# 5
+price_high_with_maintain = [idx for idx, val in enumerate(
+    price) if val == 'high' and maintenance_cost[idx] != 'low']
+# print(price_high_with_maintain)
 
-#6
+# 6
 vehicle_rating_med = [val for val in safety_rating if val == 'med']
-print(vehicle_rating_med)
+# print(vehicle_rating_med)
 
-#7
-passenger_with_auto_med = [val for idx, val in enumerate(number_of_passengers) if price[idx] == 'med']
-print(passenger_with_price_med)
+# 7
+passenger_with_auto_med = [val for idx, val in enumerate(
+    number_of_passengers) if price[idx] == 'med']
+# print(passenger_with_price_med)
 
 
-#8 
-auto_price_high_with_main_low = price_high_with_maintain =[idx for idx,val in enumerate(price) if val == 'high' and maintenance_cost[idx] != 'low']
+# 8
+auto_price_high_with_main_low = price_high_with_maintain = [
+    idx for idx, val in enumerate(price) if val == 'high' and maintenance_cost[idx] != 'low']
 
-print(auto_price_high_with_main_low)
+# print(auto_price_high_with_main_low)
+
+
+nlist = [[1, 2, 3], ['A', 'B', 'C'], [4, 5, 6], ['D', 'E', 'l']]
+
+
+new_list = []
+for i in range(len(nlist)):
+    for j in range(len(nlist[0])):
+        new_list.append(nlist[i][j])
+print(new_list)
