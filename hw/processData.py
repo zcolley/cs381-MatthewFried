@@ -46,8 +46,5 @@ auto_price_high_with_main_low = price_high_with_maintain = [
 nlist = [[1, 2, 3], ['A', 'B', 'C'], [4, 5, 6], ['D', 'E', 'l']]
 
 
-new_list = []
-for i in range(len(nlist)):
-    for j in range(len(nlist[0])):
-        new_list.append(nlist[i][j])
+new_list = [val for sub in nlist for val in sub]
 print(new_list)
