@@ -12,7 +12,7 @@ luggage_capacity = df['luggage_capacity'].tolist()
 safety_rating = df['safety_rating'].tolist()
 classification_of_vehicle = df['classification_of_vehicle'].tolist()
 
-
+# print(df.head(100))
 # 3
 prince_with_med = [idx for idx, val in enumerate(price) if val == 'med']
 # print(prince_with_med)
@@ -20,7 +20,7 @@ prince_with_med = [idx for idx, val in enumerate(price) if val == 'med']
 passenger_with_price_med = [val for idx, val in enumerate(
     number_of_passengers) if idx in prince_with_med]
 
-# print(passenger_with_price_med)
+print(passenger_with_price_med)
 # 5
 price_high_with_maintain = [idx for idx, val in enumerate(
     price) if val == 'high' and maintenance_cost[idx] != 'low']
@@ -33,7 +33,7 @@ vehicle_rating_med = [val for val in safety_rating if val == 'med']
 # 7
 passenger_with_auto_med = [val for idx, val in enumerate(
     number_of_passengers) if price[idx] == 'med']
-# print(passenger_with_price_med)
+print(passenger_with_price_med)
 
 
 # 8
@@ -47,4 +47,4 @@ nlist = [[1, 2, 3], ['A', 'B', 'C'], [4, 5, 6], ['D', 'E', 'l']]
 
 
 new_list = [val for sub in nlist for val in sub]
-print(new_list)
+# print(new_list)
