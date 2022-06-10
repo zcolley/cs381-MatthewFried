@@ -1,5 +1,5 @@
 import numpy as np
-
+import pandas as pd
 '''
 1.
 Write a Python/NumPy code block that finds the distinct/unique common items between these two
@@ -54,5 +54,13 @@ a = set(a)
 res = [val for val in b if val not in a]
 print(res)
 '''
-7.
+7.What is the maximum yearly NYC consumption of water in millions of gallons per day?
+How many calendar years are represented within this data set? NumPy's shape command is one way to find
+out.
+What is the mean and the standard deviation of the per capita daily water consumption?
+What is the increase or decrease in population from year to year? Use NumPy's `diff` function to create an array
+of differences and save that to a variable called "pop_diff", then print that variable to the screen.
 '''
+df = pd.read_excel(
+    'https://github.com/zcolley/cs381-MatthewFried/blob/main/hw/Module6_Data.xlsx')
+df.head(100)
