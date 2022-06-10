@@ -61,6 +61,20 @@ What is the mean and the standard deviation of the per capita daily water consum
 What is the increase or decrease in population from year to year? Use NumPy's `diff` function to create an array
 of differences and save that to a variable called "pop_diff", then print that variable to the screen.
 '''
-df = pd.read_excel(
-    'https://github.com/zcolley/cs381-MatthewFried/blob/main/hw/Module6_Data.xlsx')
-df.head(100)
+df = pd.read_csv(
+    'https://raw.githubusercontent.com/zcolley/cs381-MatthewFried/main/hw/Module6_Data.csv')
+
+df.columns = ['years', 'population', 'gallon', 'capita']
+# print(df)
+# 7(1)
+print(df['gallon'].max())
+
+# 7(2)
+print(len(df['years']))
+
+# 7(3)
+print(df['capita'].mean())
+print(df['capita'].max() - df['capita'].min())
+
+# 7(4)
+print(np.diff(df['years']))
