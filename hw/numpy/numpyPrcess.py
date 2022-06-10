@@ -62,7 +62,7 @@ What is the increase or decrease in population from year to year? Use NumPy's `d
 of differences and save that to a variable called "pop_diff", then print that variable to the screen.
 '''
 df = pd.read_csv(
-    'https://raw.githubusercontent.com/zcolley/cs381-MatthewFried/main/hw/Module6_Data.csv')
+    'https://raw.githubusercontent.com/zcolley/cs381-MatthewFried/main/hw/numpy/Module6_Data.csv')
 
 df.columns = ['years', 'population', 'gallon', 'capita']
 # print(df)

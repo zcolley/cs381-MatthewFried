@@ -2,7 +2,7 @@
 import pandas as pd
 
 df = pd.read_csv(
-    'https://raw.githubusercontent.com/zcolley/cs381-MatthewFried/main/hw/cars-sample35%20(1).csv', names=['price', 'maintenance_cost', 'number_of_doors', 'number_of_passengers', 'luggage_capacity', 'safety_rating', 'classification_of_vehicle'], header=None)
+    'https://raw.githubusercontent.com/zcolley/cs381-MatthewFried/main/hw/processData/cars-sample35%20(1).csv', names=['price', 'maintenance_cost', 'number_of_doors', 'number_of_passengers', 'luggage_capacity', 'safety_rating', 'classification_of_vehicle'], header=None)
 
 price = df['price'].tolist()
 maintenance_cost = df['maintenance_cost'].tolist()
