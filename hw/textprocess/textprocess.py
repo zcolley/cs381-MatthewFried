@@ -48,11 +48,13 @@ print(res)
 
 # 6 html <title>+++BREAKING NEWS+++<title>
 '''
-<.+> this will fail.
+<.+> this will fail because . means any characters so it takes space and + etc
+so it will print whole string. correct regex is <\w+>  \w means character from a-z, 0 - 9 and under score. so this regex 
+will extract first html tag.
 '''
 html_str = '<title>+++BREAKING NEWS+++<title>'
 html = re.findall('<\w+>', html_str)
-# print(html)
+print(html)
 
 # equation
 # equation_str = '(5-3)^2=5^2-2*5*3+3^2'
