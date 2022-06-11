@@ -9,18 +9,36 @@ numbers = re.findall(r'\d+', text)
 
 # extract names
 names = re.findall('[A-Za-z.,]+(?: [A-Za-z.,]+)*', text)
-# print(names)
+
+new_names = []
 # arrange order
-re_arrange = re.findall(
-    "/^[A-Z][a-z]{0,19}[\s,][A-Z][a-z]{0,19}$/", text)
-# print(re_arrange)
+for char in names:
+    # print(char.split(' '))
+    name = char.split(' ')
+    if name[0][-1] == ',':
+        name[0] = name[0][:len(name[0]) - 1]
+
+        name[0], name[1] = name[1], name[0]
+        new_names.append(' '.join(name))
+    else:
+        new_names.append(char)
+
+print(new_names)
 
 # 4 dr/dev
-# dr = re.findall(r'(Dr\.\s\w+\s\w+)', text)
-# rev = re.findall(r'(Rev\.\s\w+\s\w+)', text)
-# dr_rev = dr + rev
-dr_rev = re.findall(r'(?:Dr|Rev)\.\s\w+\s\w+', text)
-print(dr_rev)
+#
+res = []
+for char in names:
+    name = char.split(' ')
+    if name[0] == 'Dr.' or name[0] == 'Rev.':
+        res.append(True)
+    else:
+        res.append(False)
+
+print(res)
+
+# dr_rev = re.findall(r'(?:Dr|Rev)\.\s\w+\s\w+', text)
+# print(dr_rev)
 
 
 # 5  extract names
