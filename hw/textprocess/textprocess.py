@@ -23,7 +23,7 @@ for char in names:
     else:
         new_names.append(char)
 
-print(new_names)
+# print(new_names)
 
 # 4 dr/dev
 #
@@ -35,7 +35,7 @@ for char in names:
     else:
         res.append(False)
 
-print(res)
+# print(res)
 
 # dr_rev = re.findall(r'(?:Dr|Rev)\.\s\w+\s\w+', text)
 # print(dr_rev)
@@ -54,10 +54,9 @@ will extract first html tag.
 '''
 html_str = '<title>+++BREAKING NEWS+++<title>'
 html = re.findall('<\w+>', html_str)
-print(html)
+# print(html)
 
 # equation
-# equation_str = '(5-3)^2=5^2-2*5*3+3^2'
-# str_equation = re.findall(
-#     '^(\w+\)\^\w+\=\w+\^\w+\-\w+\*\w+\*\w+\+\w+\^\w+', equation_str)
-# print(str_equation)
+equation_str = '(5-3)^2=5^2-2*5*3+3^2'
+res = re.findall(r'^\([0-9-^=*+)]+', equation_str)
+print(res)
